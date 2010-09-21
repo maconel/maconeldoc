@@ -1,0 +1,3 @@
+# 改bug 4158661和bug 4146111。点确定按钮时不再关闭窗口，而是由CCustomGroupHeadWndMgr在底层通知成功时，关掉窗口。并且在设置过程中，将窗口除取消按钮外其他控件都diable掉(为了界面显示灰色的效果)，成功或失败后恢复。
+# 改bug 4172451。当设置头像窗口关掉后，不再弹出messagebox，如果窗口还在，则以窗口为父窗口弹模态messagebox。
+# 翻译一篇V8的文档，Embedder's Guide - V8 JavaScript Engine(http://km.oa.com/group/1835/article_view/48554)。已完成。

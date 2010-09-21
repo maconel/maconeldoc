@@ -1,0 +1,5 @@
+1.修改bug 3676971. CAppGroupChatMsgLogic::ShowFrameInEdit()中不先增加一个空行，也不调用MarkAutoSize()，否则会显示一大片空白。
+2.修改了没有拉最新群动态的问题。是CAppGroupChatMsgLogic::ShowFrameInEdit()中没有调用CAppGroupChatMsgLogic::GetRichEditFrame()导致的，现已补上。另外pFrameObj中每个子控件，都应改成autoWidth的。另外为了美观，去掉了CAppChatFramePanelCtrl::WriteSecurityTip()中加的半个空行。
+3.联调server端群头像上传权限限制。
+4.修改bug 3771511，CAppGroupSideBarLogic::OnTimer()中调整rcHot的left&right即可. bug 3772501由于不知道tips到底弹出没有，而暂时无法修改。由于bug 3771511与bug 3772501有关联，因此也暂时不修改。
+5.修改bug 3788281. 将GroupMinHeightWithHiddenSidebar修改为与GroupMinHeightWithSidebar相同。

@@ -1,0 +1,4 @@
+# 修复StringBundle.xml。
+# 看V8文章《Design Elements》。
+# 实习生COM学习分享会。
+# 按新UI调整了二级导航栏。

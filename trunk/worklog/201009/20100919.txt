@@ -1,0 +1,4 @@
+# 与leonchan交接博客版工作。
+# 写Android预研计划。
+# 看了官方的ndk安装引导文章。
+# 在开发机上装好了sdk、ndk、cygwin，开发环境已经装好了。

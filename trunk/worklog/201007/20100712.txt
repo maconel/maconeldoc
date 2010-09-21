@@ -1,0 +1,4 @@
+# 改bug 4130011。AFProfileFrame.xml中将ProfileOther下移1像素，CDiscussProfileLogic::InternalInitProfileItems()中，在yahei情况下，上移1像素，即可。
+# 前台组例会。
+# 终端架构、浏览器等讨论会。
+# 改bug 4139091. 将AFSidebar.xml中DiscussPluginDock通过margin上提1像素，将上边那条线被盖起来即可。同时还解决了jinghuang提了很久的问题。

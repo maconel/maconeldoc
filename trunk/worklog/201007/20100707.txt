@@ -1,0 +1,4 @@
+# 安排实习生工作。
+# 1.55开发。去掉Q吧相关代码。代码都在QBar这个plugin里。
+# 协助davidwdai解决hummer里工程文件的问题。
+# 跟bug 4116691。问题原因是讨论组session已删除，但GAudio里还创建session，导致session取不到数据。解决方法是在CGAudioAttendeeMsgLogic::DisposeRequestMsg()中，在创建session前，先通过ITXDiscussMgr判断讨论组是否存在。

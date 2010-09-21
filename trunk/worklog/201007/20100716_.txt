@@ -1,0 +1,7 @@
+# 修改1.51 bug。35%
+# 前台组例会。2%
+# 终端架构、浏览器等讨论会。3%
+# 群面板二级导航需求开发。40%
+# 平台组例会。5%
+# 翻译一篇V8的文档，Embedder's Guide - V8 JavaScript Engine(http://km.oa.com/group/1835/article_view/48554)。10%
+# yorklian COM学习分享会。5%

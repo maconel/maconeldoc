@@ -1,0 +1,7 @@
+# hummer安全分享。
+# 改bug 4277441。有2个问题导致这个bug。1是CGroupFolderNodeLogic::OnCallback_ModifyGroupFolder()中，将folder名字设置到labelex中了，但对群数却没有处理。2是CGroupFolderSimulateMgr中调回调时，ITXData参数中，GroupFolder::strFolderName和GroupFolder::cFolderId字段都是hardcode为uSize-1，改为实际改名的folder即可。
+# "群分组"、"群面板"改造数据上报，分配大T。
+# 改bug 4264941。"查看/修改群资料"和"成员管理"是在响应函数中，将if (0 == m_stSelNodeInfo.dwCurGroupNodeId)误写成if (m_stSelNodeInfo.dwCurGroupNodeId)导致的。"更换群图标"是1.51中新加的，但在1.55中最新版本里，CGroupPanelPage::CGroupPanelPage()中往m_MenuClickProcesses里绑定响应的代码不见了，可能是合版本时丢了，现在已加上。
+# 改bug 4277621。此bug与另一个bug重复，已修改。但检查此bug时发现另一个问题。如果有名字为空字符串的folder，会导致程序crash。经检查，CMenuItemInfo的最后一个构造函数对没有用到的成员变量，如m_szStrId，没有初始化，而在AddMenuItem()时，如果m_strText为空，就试图用没有初始化的m_szStrId来载入资源，导致crash。修正CMenuItemInfo后，程序不crash了，但又发现文字为空的菜单项无法点击，只好在CGroupPanelPage::ConstructGroupFolderListSubMenu()中判断，如果foldername为空，就强制设成一个空格。补充一下，在debug下，未初始化的变量为0xcccccccc，在release下，为随机值。所以在某些情况，这个值刚好为0，或者后面不远就有0，这样在TXLoadString时，就失败，但不会crash。但如果运气不好(也许这应该算运气好)时，还是会crash。
+# 改bug 4275891。设置IGFMenuItemEx的shortcutFromText属性为FALSE即可。具体到这里的代码，是通过CMenuItemInfo的构造函数的bShortCut参数来实现的。
+# 改bug 4266841。在CGroupPanelPage::CreateGroupFolderMenu()中，在添加"重命名分组"和"删除分组"时，通过FOLDERINFO的bCanRename和bCanDelete来判断是否灰显。

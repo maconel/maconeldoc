@@ -1,0 +1,4 @@
+1.改bug 3900321. 原因是每个讨论组的event，所有讨论组都会收到，CAppDiscussChatSession::OnDiscussEvent()中没有没有判断这消息是不是给自己的，所以某讨论组退出时，所有讨论组都会做CloseSession()的动作。解决方法是只有讨论组id是自己时才做处理就可以了。
+2.整理简历和面试题。
+3.前台组例会。jet分享MVP模式，jet设计架构和qqweb架构。
+4.预估1.51开发量。

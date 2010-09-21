@@ -1,0 +1,4 @@
+# 改bug 4419951。原因是DiscussAndExtPanelCtrl.cpp中，MENU_DISCUSSSENDMSG是enum中第一项，默认被定义为0，导致显示"发送讨论组消息"菜单项时，就算在线dwCmdId也会是0。解决方法是将MENU_DISCUSSSENDMSG定义处改为100(与MainGroupPage.cpp中一致)。
+# 指导choco截屏程序的开发。
+# 后续版本需求讨论会。
+# 改bug 4397551。原因是拉到的groupuin为0或不存在。修改方式是这里不显示这些"GroupName(123456)"的提示，而是在groupname处提示"载入失败"。

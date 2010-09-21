@@ -1,0 +1,6 @@
+# 跟windows服务器配置的问题。jeffli说，是防火墙的问题，已经填了申请单，预计明天可以通过。
+# 写项目周报，将10.1假期从开发时间中去掉。
+# 控件升级的跟踪。找了产品，产品会安排相关的前台同事进行页面上的修改。
+# 帮diya解决控件编译和注册的问题。编译问题是中文版vc导致。注册问题原因是动态调用SetDllDirectory时，SetDllDirectory名字应该是SetDllDirectoryA或SetDllDirectoryW。写错函数名导致GetProcAddress返回NULL，没有判断返回值，导致DllMain异常，所以注册不成功。
+# 调查某些群号码显示为0的问题。已发调查结果邮件。
+# 发hummer资料给garygong。

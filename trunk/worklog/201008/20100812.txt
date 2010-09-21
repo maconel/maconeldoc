@@ -1,0 +1,9 @@
+# 改bug 4318401。原因是CDiscussAndExtPanelCtrl收不到KeyDown的消息，因此无法在需要时弹出菜单。解决方法是在CGroupPanelPage中收到KeyDown后，判断如果显示了讨论组panel，就调讨论组的OnMessage，将KeyDown消息手动传过去。另外CDiscussAndExtPanelCtrl::ActiveFolder()中也有个错误，没有将dwFolderId赋值给m_dwCurrentNodeId，导致按菜单键时弹不出菜单，已修改。
+# 改bug 4359041。原因是CContactFolderNode::OnKeyDown()中，没有put_state(MainPanelPage::FOLDERNODESTATE_Pressed)，导致m_pFSM还保持着老的state值。如果之前的状态是MainPanelPage::FOLDERNODESTATE_Edit，那么就会一直保持这个state值。当CContactFolderNode::OnMessage_OleDragEnter()和CContactFolderNode::OnMessage_OleDragLeave()时，就会把m_pFSM里保存的state值又设置一次，就出现了这个现象。解决方法是，CGroupPanelPage::OnNodeEvent()中，MainPanelPage::FOLDERNODEEVENT_EDITFINISH事件时，调用pContactFolderNode->put_state(MainPanelPage::FOLDERNODESTATE_Pressed)，覆盖掉错误的state值即可。安全起见，没有在CContactFolderNode里做改动，其实在这里改才是根本的。
+# CGroupFolderNodeLogic::OnCallback_DeleteGroupFolder()的参数pDataCallback不为NULL了，把临时方法去掉。
+# 改bug 4356541。原因是添加临时分组添加的临时folderid为-1，而logic里回调时是255，导致匹配不上。解决方法是，将代码中所有-1，都改用定义的常量GroupFolder::INVALID_FOLDERID。
+# 将CGroupFolderNodeLogic::OnCallback_AddGroupFolder()中一些对IContactFolderNode的操作，改到CGroupPanelPage::ResetGroupFolderAfterEdit()中。
+# IContactFolderNode::SetFolderId()和IContactFolderNode::GetFolderId()使用-1，因此针对此做了-1和GroupFolder::INVALID_FOLDERID间的转换。
+# 添加分组时的临时folderid原本使用-1，现改成使用常量GroupFolder::INVALID_FOLDERID，定义为254。
+# 改bug 4362351。原因是CGroupPanelPage::CheckIsFolderListUpdated()调用时机过早。拖拽是靠m_dwDragingFolderIdForm, m_dwDragingFolderId等变量来区分拖folder和拖群的。CheckIsFolderListUpdated()在判断是拖folder还是拖群之前就调用了，这样就导致拖folder时，在拖folder和拖群的代码处，都会执行CheckIsFolderListUpdated()，导致弹出2次。其他各处调用CheckIsFolderListUpdated()的地方，也有这个问题。解决方法是把CheckIsFolderListUpdated()的调用时机尽量调后。
+# 由于IContactFolderNode的SetFolderNode和GetFolderNode只认-1为临时变量，所以folder临时idc_TEMP_FOLDER_ID必须用-1。

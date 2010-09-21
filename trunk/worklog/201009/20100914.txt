@@ -1,0 +1,5 @@
+# 查改相册控件支持100个人的需求，应该是由页面通过UploadLimit属性来设置。
+# 发现新做的dll安全的代码，DllMain()中，SetDllDirectoryA的类型缺少WINAPI，已加上。
+# 将nphotkey.dll与截屏的控件打包到一起，不再分为2个安装包。
+# Android开发培训。16:25 - 18:25
+# 调整群博客版项目计划。

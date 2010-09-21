@@ -1,0 +1,3 @@
+1.改bug 3894211. CGroupPanelPage::InvalidateFolderNode()中，原本是直接拼出"讨论组[xx]"，然后用put_label来显示。现在向contactpage学习，只组出"讨论组"并put_label，然后再组出"[xx]"，用put_labelex显示，即可解决问题。
+2.翻译chromium代码风格。
+3.改bug 3894211. 刚才只是改了讨论组的这个问题，Q吧还得在另一个地方改。Q吧是把这些信息放在TXData里，然后由CGroupExtNodeLogic接收TXData并显示。所以先在ContactNodeExt.h中定义一个GroupNodeExtPoint::Properties::strTextEx，并在CQBarGroupPageExtMgr::GenFolderInfo()中设置strTextEx，在CGroupExtNodeLogic::UpdateFolderProperties()中读出来并设置到pFolderNode的labelex里去就可以了。

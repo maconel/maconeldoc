@@ -1,0 +1,6 @@
+# 跟bug 4380401。初步查明原因是CGroupFolderNodeLogic::AddGroupsInFolder()中pGroupFolderMgr->GetGroupList(cFolderId, &parGroupList)返回的list的size为0，也就是返回的folder下没有group。需要底层进一步跟进。
+# leon做了rebase。需要更新重编。
+# 改大小头像切换慢的问题。估计原因可能是CGroupPanelPage::SetNodeMode()中SAFE_POINTER(m_pGroupNodeLogic)->SetMode(eMode);放在LockUpdate()外的原因。但不管m_pPagePanel是不是NULL，这句都应该执行，因此就改成SAFE_POINTER(m_pGroupMainScrollView)->LockUpdate();而不是m_pPagePanel。另外还加了性能日志。由于目前尚不确定是否已改好，就先不关单。
+# 改bug 4382921。已按需求修改。当显示引导界面时，tab菜单中灰显"添加群分组"。
+# bug 4380401。底层已修改，下个版本中可测。
+# 改bug 4384101。也就是改大小头像切换慢的问题。原因是SAFE_POINTER(m_pGroupNodeLogic)->SetMode(eMode);里很慢，就算将scrollview lock住都很慢，可能是由于autoHeight，导致内部不断layout计算size。参考好友的代码后，先循环调用每个IListLayout的LockUpdate()，才能避免他们计算size。然后SetMode，然后循环解锁。

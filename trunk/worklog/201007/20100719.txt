@@ -1,0 +1,3 @@
+# 跟二级导航栏能宽不能窄的问题。原因是MainGroupPage下自动加的control不是sizeAsParent的。
+# 1.55测试用例评审会。
+# 试图在虚拟机上安装mac系统，失败。

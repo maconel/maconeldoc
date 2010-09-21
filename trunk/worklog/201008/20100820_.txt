@@ -1,0 +1,15 @@
+本周:
+# 例会。benchen安排了后续的工作计划。review了实习生的代码。5%
+# 实习生指导。5%
+# 给编译机安装配置svn和ftp。5%
+# 修改group 1.55bug。45%
+# 跟拉不到群列表和群成员的问题。底层是darrylu负责。目前已经在conn上针对几个号码加了日志。jasonchen前段时间在底层也加了日志。wingyipye和我在试着重现。20%
+# 准备blog版开发，讨论cs通道的实现方案。server是stanchu负责，目前已经定了方案，在已有通道的基础上，增加增加一个或几个子协议号，中间的数据中我们可以自己再增加子类型，群server只是透传给我们的server。10%
+# 讨论ie截屏的实现方案。页面 - java - 截屏 - 图片server。截屏部分通过apache+cgi的方式与java交互，通过http post的方式与图片server交互。apache+cgi由plutoxiong指导，chocozhou开发实现。开发计划未定。10%
+
+下周:
+# 例会、评审会、培训等。10%
+# 修改group 1.55bug。30%
+# blog版开发预研。30%
+# iPhone下开发学习。20%
+# 实习生指导。10%

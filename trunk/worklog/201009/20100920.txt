@@ -1,0 +1,3 @@
+# 完成了ndk的第一个demo。
+# 配合tealin和basezhang联调截图程序。发现我电脑上vs2005编译出来的控制台程序，在win2003上执行时，会提示"the system cannot find the file specified program"。用vc6重建工程编译，就可以了。
+# QQ1.55总结ppt。

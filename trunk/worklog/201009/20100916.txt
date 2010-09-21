@@ -1,0 +1,3 @@
+# 给gary介绍hummer的目录结果，af层架构，常用工具等。
+# 群话题需求。增加CAppGroupChatMsgCtrl类，并编译通过。
+# IDP。

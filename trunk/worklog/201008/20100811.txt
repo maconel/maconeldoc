@@ -1,0 +1,4 @@
+# 改bug 4325211。当IsFolderListUpdated()为FALSE时，也提示"群分组信息更新中，请稍后再试。"。当收到底层超时时，提示"网络超时，请稍后重试。"。
+# 跟bug 4264221。已确定是GF的问题，可以提单给他们，但解决时间不能确定，要看优先级，负责人是arthaszhou(周蔚)。我们的单可以先挂起。
+# 改bug 4313251。原因是CheckGroupPageStates()中，创建空或非空的panel时，没有判断当前是group还是discuss并做出处理，导致group和discuss 2个面板都显示出来了。解决方法是在CheckGroupPageStates()中调用SwitchPanel(m_enPanel)，对group和discuss再做次显示或隐藏。
+# 跟bug 4336351。没重现。加了一些日志。调整了CGroupPanelPage::ConstructGroupFolderListSubMenu()中取分组名的顺序，让流程更清晰。改了CGroupFolderNodeLogic::GetFolderName()中一个bug，当为默认分组时，函数返回E_FAIL，应该返回S_OK才对。

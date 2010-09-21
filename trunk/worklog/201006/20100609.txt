@@ -1,0 +1,3 @@
+1.改bug 3964411. CGroupConfigFrame::UpdateGroupMemInfo()中，将ActivateGroupMemItemByUin()放在m_pListMem->SetRedraw(TRUE)前，这样就可以在开始画前完成选择动作。由于debug下assert太猖狂，看不清效果到底改好没，所以等测试验证后再改bug单状态吧。
+2.完成了群设置成员列表处，下面皇冠的界面和相关点击事件处理。
+3.将群设置成员列表下面3个按钮的创建从代码中去掉，改到xml中。

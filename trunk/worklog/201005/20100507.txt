@@ -1,0 +1,2 @@
+1.跟bug 3676971. 未果:(
+2.修改bug 3493601. debug版本没有问题，release版本有问题，height没问题，width有问题。可能是release做了缓存优化导致的。CAFGroupSidebarLogic::SetMiniportalSize()不管width是否过小，都设置一下，像height一样。需要等下次打包后再测试一下。

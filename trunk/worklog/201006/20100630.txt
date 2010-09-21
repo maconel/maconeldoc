@@ -1,0 +1,3 @@
+# 1.50总结会。
+# 修改bug 4061951。解决方法是bug单中描述的上策。底层在回调CGroupConfigFrame::OnCallback_CreatorSetManager()时，在参数中增加了uin和set标志，上层就不需要记录在成员变量中，此bug即可解决。
+# 写群话题架构设计文档。
