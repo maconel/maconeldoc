@@ -1,0 +1,5 @@
+# 制定博客版开发计划。
+# 将周末review截屏程序发现的问题讲给实习生。
+# 讨论重构需求。
+# 改bug 4444331。这个体验要改成，切换到群或讨论组面板时，自动讲焦点设置到群或讨论组面板，以便按方向键就可以对群或组做选择操作。修改方法：1.在点群或讨论组按钮时，将焦点定位到m_pGroupMainScrollView或m_pDiscAndExtPanelCtrl。2.CGroupPanelPage::CreateGroupPage()时，通过ActiveFolder()选择默认分组。3.tagSelectNodeInfo的构造函数中，dwCurGroupNodeId初始化为GroupFolder::INVALID_FOLDERID，否则ActiveFolder()时会失败。4.讨论组也需要在CDiscussAndExtPanelCtrl::CreateDiscussPage()中ActiveFolder()，来默认选中分组。另外发现CDiscussAndExtPanelCtrl中有些成员变量，比如m_bCurrentFolder和m_dwCurrentNodeId没有初始化。现在通ActiveFolder()也完成了初始化。
+# 帮jasonjin检查他给出的列表中，哪些是由client做数据上报。

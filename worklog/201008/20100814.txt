@@ -1,0 +1,5 @@
+# 改bug 4264221。修改方法是，CGroupPanelPage中用2个成员变量m_szGroupPanelScrollViewPosition和m_szDiscussPanelScrollViewPosition老保存每个面板当前的scrollview位置。在切换面板时，记录和设置滚动条位置。
+# 给编译机安装配置svn和ftp。
+# 改bug 4371841。修改方法是，搜索是靠IPageActionExt扩展来实现的，在CGroupPanelPage::OnActiveGroupItem()中调用SwitchPanel(PANEL_GROUP)即可。
+# bug 4375531。现在没有好的方式解决这个问题，请hanlu挂起。
+# 改bug 4264601。原因是在产生GBE_Pushed事件时，先将按钮改为normal状态了，然后才调用事件处理函数，在事件处理函数中，只好再将按钮改为pushed状态，就导致看起来闪一下。解决方法是，改为在PreMessage中处理，并设置*pbProceedMsgFlow = FALSE，这样消息不再继续传递，就不会在事件里改状态了。

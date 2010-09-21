@@ -1,0 +1,1 @@
+1.修改bug3158081和bug3592541。是通过NewChatFrame.xml中，在AFProfileCtrl节点中，设置size和margin来实现的。

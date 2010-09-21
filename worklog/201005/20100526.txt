@@ -1,0 +1,2 @@
+1.平台组周例会。后续讨论if雅黑的问题。havenwang分享了dropbox的相关知识。
+2.跟bug 3835911. 现象是，如果主动发起多人语音，则最小大小没问题，如果被动，则有问题。已知原因是，如果主动，则先从配置读了最小大小，然后对其进行了调整。但被动时，是先调整，才读配置，导致问题。现在跟到，CAFChatFrameSessionCenter::CreateSession()->HandleEvent(CF_OnSessionCreatedFinishedPre)->CGFElementExtLogic::Create()->LoadExtensionList()->CGFContainerExtLogic::InternalAddExtension()->RaiseGFEvent(GXLE_OnExtElementAdded)，主动时，这个事件似乎没被处理，而被动时，这个事件被处理，调到了AudioVedio插件里，并且创建了sidebar并调整了最小大小。再往后，还需继续调试。

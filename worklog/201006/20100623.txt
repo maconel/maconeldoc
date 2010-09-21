@@ -1,0 +1,5 @@
+1.约应聘者笔试。
+2.昨天的重构GroupConfigFrame工作由于工作量比较大，1.51中就先取消不做了。
+3.将CGroupConfigFrame::ShowFrame()中做的加载m_pListMem的动作，改到OnIdle中进行，这样保证UI可以很快地先出来。另外向server请求的更新数据如果先于OnIdle到达，就取消OnIdle的动作，避免重复加载m_pListMem。
+4.由于上面的改动，同时也解决了bug 4026031。
+5.找简历。

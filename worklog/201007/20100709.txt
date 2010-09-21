@@ -1,0 +1,3 @@
+# 开发ie代理设置程序。
+# 跟bug 4132841。发现当切换tab时，QQShow的某些控件会移动位置，并隐藏改为非隐藏。已由phantomqi转给其他人修改。
+# 跟bug 4130011。AFProfileFrame.xml中将ProfileOther下移1像素，CDiscussProfileLogic::InternalInitProfileItems()中，在yahei情况下，上移1像素，即可。但AFProfileFrame.xml被havenwang co了，暂时还不能ci，只能hijack改。

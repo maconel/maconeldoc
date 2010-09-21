@@ -1,0 +1,5 @@
+1.1.51和1.55新需求讨论会。
+2.修改bug 3802591. CCustomGroupHeadWndMgr::ChangeHead()中，ITXGroupHeadMgr::UploadGroupDefinehead()或ITXGroupHeadMgr::CancelGroupDefinehead()返回失败时，也与网络中断提示同样的提示语。提示语修改为"网络超时，请稍后重试。".
+3.开发流程访谈。
+4.跟bug 3754081. 讨论组说是已经改过了，但也还是同样的现象，需要请tracyliu再过下，看是已经可以了，还是2者都需要改。
+5.在km上分享了编译chromium的过程。http://km.oa.com/post/68569

@@ -1,0 +1,2 @@
+1.跟bug 3817031. 当win7下设置了半透明效果后，还是会有残影。GF由于技术问题无法修改，暂定方案是通过减小字号解决。
+2.跟bug 3850501. 发现在CGroupCardPage::FillUIData()中，pGroup->GetUserInfo(m_dwUin, &pData)取出的pData中，不包含strCardName等信息。

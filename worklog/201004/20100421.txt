@@ -1,0 +1,3 @@
+1.修改bug 3494731。当session已打开时，就不再执行自动弹出的动作。discuss和group都做这样的处理。
+2.修改bug 3277971。现在转给phantomqi(漆星剑)改。我跟到ITXDiscuss::UpLoadDiscMember()里，没看到异常，这个函数最后返回S_OK。然后CTXDiscuss::OnDiscModifyMemReply()也被异步调用到了，也将事件继续回调给了我这边，result参数是CALLBACK_RESULT_SUCCEED。在我这边成员列表里，已经把第三个人加进来了，但是语音的sidebar里没有他。发text消息，他也能收得到，但不是语音状态，而是普通讨论组。
+3.修改bug 3276251。af改造后，讨论组标题控件名由ProfileName改成了DiscussProfileName，导致CGAudioUiLogic::StartChatFrameListener_Internal()找不到控件，设置标题失败。

@@ -1,0 +1,4 @@
+1.讨论bug 3779811. 由havenwang改CTXChatRichEdit::AddTip()，上下各删一个_T("\r\n")，这样上面留一行空行，下面不留。
+2.修改bug 3802591. 底层不提供比较细的错误码。现在改为如果不成功或不是取消，就提示"上传失败，请稍后重试。".
+3.修改bug 3771511. 通过修改CAppGroupSideBarLogic::OnTimer()里的rcHot实现。
+4.修改bug 3772501. 把DELAY_UPDATE_MEM_INFO_TIMERID改成interval模式的timer，并加一个标志m_bShowTips表示是否正在show tips. 每次OnTimer都先自己判断是否在热区内，如果在，并且m_bShowTips为FALSE，就ShowTips().

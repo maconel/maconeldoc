@@ -1,0 +1,1 @@
+1.点击讨论组的Profile区时，取消DiscussLongName的编辑状态。

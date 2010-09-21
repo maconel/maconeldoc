@@ -1,0 +1,1 @@
+1.跟bug http://tapd.oa.com/v3/10014001/bugtrace/bugs/view?bug_id=3278661。在用户上线时，gaudio会通过discuin和chattype来找是否已存在session(CGAudioAttendeeSession::DelayProcessAttendeeEvent(), case GAUDIO::ATTENDEEEVT_REFUSE处)，如果不存在(返回FALSE)，就删除IGAudioSessionMgr中记录的session，这样就不会显示多人语音的右边栏了。但1.50里，ChatSession::GetChatSessionMainWnd()在找不到session的情况下，却返回TRUE，导致了这个bug.

@@ -1,0 +1,1 @@
+1.跟bug http://tapd.oa.com/v3/10014001/bugtrace/bugs/view?bug_id=3277411。发现在AFSidebar.xml中，AFSidebarContainer节点比1.46多了背景图，导致竖线被遮盖。竖线是画在AFSidebarDockPanel上，但还不知道竖线是在哪里设置的。如果将AFSidebarContainer左边加一个margin，会导致群成员页卡也向右移，而他自己也有一跳线，加上父的，会出现一条粗线。解决方法待定。

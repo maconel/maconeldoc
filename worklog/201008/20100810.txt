@@ -1,0 +1,7 @@
+# 改bug 4313841。之前显示这个错误是为了方便大家看到确实出错了。jasonchen说现在不会再有CALLBACK_RESULT_FAIL_WITH_PROMPT错误码，如果有提示，都在CALLBACK_RESULT_FAIL中，通过pDataCallback还可取出更详细的错误码和提示。现在如果是CALLBACK_RESULT_TIMEOUT错误，就弹超时那个提示，否则就弹server的提示，如果有的话。
+# 改bug 4266231。CGroupFolderNodeLogic::OnCallback_MoveGroupB4DeleteFolder()中，通过调用OnCallback_MoveGroup()，实现移动，闪烁等的处理。
+# 中心年会。
+# 改bug 4313251。原因是在退出最后一个群，切换回空面板时，没有清空m_mapFolderInfo，导致再加一个群，又需要显示默认分组时，添加失败。解决方法是CGroupPanelPage::CheckGroupPageStates()中切换到空面板时，清空相关容器。同时还完成另一个需求，只有在没有群，而且只剩一个分组时(那肯定是默认分组了)，才显示空面板。另外还发现一个bug，删除最后一个非默认分组时，没有从m_setSortFolders中去掉，也没有CheckGroupPageStates()。这个一并改了。
+# CGroupPanelPage::ReSortFolders()中InsertFolder()时，新加的folder将会不显示名字，leon已重构此部分，这里使用新重构的调用方法。
+# 跟bug 4325501。build 18中未重现。
+# 改bug 4338681。由于代码中为调试方便，给每个folder和group node都加了name，leon修改了起名规则，导致name重复，引发这个问题。修改方法是不再设置name。

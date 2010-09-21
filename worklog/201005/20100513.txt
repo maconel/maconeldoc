@@ -1,0 +1,5 @@
+1.昨天的修改bug 3676971. 在AppGroupChatMsgLogic里只实现ShowFrameEdit即可。cc已解锁，已checkin.
+2.改bug 3794481。CGroupConfigFrame::CheckUpdateAll()中，只调了UpdateGroupBasicInfo()，改为同时也调UpdateCommonInfo().
+3.跟bug 3779181，发现HRESULT CDiscussProfileLogic::HandleHasSendMsg(ITXData *pData)这个函数中，参数pData中取不到MsgFieldDef::MSGPACK，导致没有正确改名。
+4.改bug 3779181. CDiscussProfileLogic::HandleHasSendMsg()本应在参数pData中带有pMsgPack，但现在没有了，就导致这个问题。应该在CDiscussProfileLogic::HandleHasSendMsg()调用链中某处，将pMsgPack加到pData中。现在是在CAFDiscussChatLogic::InternalPostSendMsg()这一层加入了。
+5.联调server端群头像上传权限限制。

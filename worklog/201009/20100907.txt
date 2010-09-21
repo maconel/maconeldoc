@@ -1,0 +1,4 @@
+# 配置windows server。
+# 改bug 4465441。按leon给的修改方式改了。经检查无误。
+# 改bug 4517891。原因是当从别的面板切到群面板时，直接将焦点给scrollview了。修改方法是CGroupPanelPage::OnContactPageChange中，判断当前显示群还是讨论组，然后分别给m_pGroupMainScrollView或m_pDiscAndExtPanelCtrl设置焦点。
+# 跟bug 4465671。试了一些方法，但还没查到原因。

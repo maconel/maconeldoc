@@ -1,0 +1,10 @@
+1.将"发起多人会话"改为"创建讨论组".
+2.修改bug 3783271.
+    这里原本使用Util::Group::HaveRightModifyCard()来预判断是否有权限，然后向server发请求，server会再次判断权限。
+    如果server判断没有权限，则返回响应并附带提示文字，通过CGroupCardPage::OnUploadMemCardCallback()来提示用户。
+    如果Util::Group::HaveRightModifyCard()判断没有权限，也应给出提示。
+    2种修改方法：
+    1.Util::Group::HaveRightModifyCard()返回FALSE时提示。可以少一次请求，但文字得hardcode.
+    2.本地不判断权限，直接向server发请求，由server判断。多一次请求，但文字统一由server配置，比较灵活。
+    考虑到这种情况发生概率较小，选择方案2.
+3.修改了bug 3676971. 自己在在AppGroupChatMsgLogic里把ShowFrameEdit和GetRichEditFrame又都实现了一遍，并指定宽度为自动即可不占一行。但由于cc被锁定，因此还不能ci.

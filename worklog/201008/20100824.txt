@@ -1,0 +1,8 @@
+# 增加对IAFMainFrameExt扩展的响应。
+# 改bug 4413391。原因是切到group page时，m_pGroupMainScrollView没有得到焦点，因此没有响应按键事件。经与产品和测试的讨论，决定改为，切到group page时，让m_pGroupMainScrollView得到焦点，但不改变各控件的焦点顺序。实现方式是，在IAFMainFrameExt的响应中，让m_pGroupMainScrollView获取焦点。
+# 改bug 4284591。底层已经支持了单里描述的效果，上层改为调用这个新接口。
+# 改bug 4411801。原因正如leon所说，stringbundle中字符串在合流时被人合掉了，现已重新加入。
+# 改bug 4415341。原因是改为在PreMessage中自己处理PushButton的状态后，没有处理按键事件。解决方法是，在KeyDown消息处理函数中，处理VK_RETURN和VK_SPACE按键即可。然后又发现一个问题，space键已经没问题了，但按enter键，按钮会变回normal状态。经过跟踪调试，发现原因是CGFButton在处理GFM_DefaultAction消息时，会将PushButton按钮由pushed状态改为nomal状态。解决方法是，同样在上层将GFM_DefaultAction消息也拦截，即可。
+# 改bug 4416151。原因是page的tab重构，菜单相关函数也做了修改。原来在CGroupPanelPage::OnMessage_RButtonClick()和CGroupPanelPage::OnClickTabMenuButton()之间，还有一层CGroupPanelPage::PopoutMenu()，这里边做了什么时候不显示右键菜单的逻辑。重构后，这部分逻辑放在了CGroupPanelPage::OnMessage_RButtonClick()中，但把讨论组面板不弹此菜单的逻辑丢掉了(因为这个逻辑是新加的)。解决方法是在CGroupPanelPage::OnMessage_RButtonClick()中重新加上此逻辑。
+# 改bug 4437011。原因是在CGroupConfigFrame::OnCallback_xxx()中，失败时也会调用CallWndback();来关闭窗体，经与产品确认，这时是不应该关的，只有成功才关。解决方法是CGroupConfigFrame::OnCallback_xxx()中失败时，不调CallWndback();。
+# bug 4437011。还有点问题，暂时恢复了修改的代码。

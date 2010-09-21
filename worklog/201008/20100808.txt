@@ -1,0 +1,4 @@
+# 跟bug 4318221。退出时，是先将主窗体隐藏，然后再慢慢退出。如果这时出现messagebox，就会弹出来。可能因为这个测试server还不稳定，所以导致比较容易出现，等后期稳定了，可能会好一些。期望结果写得很有文采，赞一个，以后继续发扬。
+# 改bug 4318161。CGroupFolderNodeLogic::RenameFolder()中，当底层调用时就返回失败，会直接去调OnCallback_ModifyGroupFolder()，但nResult会传CALLBACK_RESULT_FAIL，导致出现提示。现在改成nResult传CALLBACK_RESULT_CANCEL，并在OnCallback_ModifyGroupFolder()对此做处理。
+# 改bug 4318081。原先pModeNode->put_oleDrag(TRUE);这行代码在CGroupNodeLogic::AddGroupNode()中，而CGroupNodeLogic::AddGroupNode()在展开folder时才执行。头像的oleDrag是在设置头像时，自动与父控件，也就是IModeNode保持一致，而设置头像是在CGroupNodeLogic::RegisterGroupNode()中，比较早，导致头像的oleDrag为FALSE。现在把设置IModeNode的oleDrag改到CGroupNodeLogic::RegisterGroupNode()中，SetNodeMode()的前边，即可。
+# 去掉了CGroupFolderNodeLogic::OnCallback_MoveGroupB4DeleteFolder()中对dwDeletingFolderId的使用，但CGroupFolderNodeLogic::OnCallback_DeleteGroupFolder()中因为pDataCallback为NULL，还在使用。

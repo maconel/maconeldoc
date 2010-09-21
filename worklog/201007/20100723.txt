@@ -1,0 +1,2 @@
+# 解决了断点空心的问题。CGroupPanelPage::AddGroupNode()中新加的ADD_EVENT_LISTENER( pGroupNode, ModeNode::NODEEVENT_LOADDATA, m_pListener);等3行导致的，而且发现，只要前边\t前，再加个空格，就可以解决。具体原因还是不清楚，也许是bug吧。
+# 实习生COM学习分享会。

@@ -1,0 +1,7 @@
+1.修改bug 3493601.
+原因是在登录后，aio窗体宽库被缓存，导致打开下个窗口上时，使用了缓存数据作为默认宽度。
+解决方法是在CAFGroupSidebar::HandleEvent()中，CF_QuerySidebarHiddenStatus事件时，将正确的默认宽度写到TXData中。
+并将上次不起作用的修改方式回退。
+2.修改bug 3780851. 修改方法与讨论组此bug相同。修改NewChatFrame.xml中，AFProfileCtrl节点的size和margin。
+3.将"邀请群友进行多人会话"改为"创建讨论组"。
+4.将"邀请好友进行多人会话"改为"创建讨论组"。

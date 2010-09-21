@@ -1,0 +1,4 @@
+1.解决了上周5出现的群和讨论组profile区文字错位问题。
+2.修改bug 3706541。增加对GroupHead_History头像类型的处理。
+3.bug 3706541，havenwang也在跟，那就等他一起改好吧。
+4.调试clipboardsharer, 并开始使用。

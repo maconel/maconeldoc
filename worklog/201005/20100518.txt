@@ -1,0 +1,8 @@
+1.修改bug 3779561. 原因是hook了OnGroupEvent后，没有RegisterExtension，导致OnGroupEvent没有被调用。
+2.讨论组会议，定下开发点。
+3.跟bug 3779811. 原因是CTXChatRichEdit::AddTip()中调用了4次AddText(_T("\r\n"),0);
+4.bug 3671471. 不需修改，返单了。
+5.跟bug 3778291. 不重现。
+6.跟bug 3778441. 估计原因是5.xml没有被打入安装包的原因。
+7.跟bug 3802591. 发现CCustomGroupHeadWndMgr::OnCallback_UploadHead()的参数nResult在网络错误时和取不到群等级时，都会产生-3错误。
+8.修改bug 3778441. 用CSCGenerator打包成了5.

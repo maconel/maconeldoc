@@ -1,0 +1,3 @@
+# review bug，把打算后面版本改的和外部门改的bug拿出来，不统计到bug解决率里。
+# 改bug 4465551。原因是scrollview里的content不接受拖放。在CGroupPanelPage::CreateGroupPage()中，通过GetContentFrame()得到scrollview的content，然后给它设置put_oleDrop(TRUE);即可。
+# 截屏程序遇到问题，SYSTEM用户下，由php调起来的命令行程序，找不到ui程序的窗口句柄。指导choco解决。

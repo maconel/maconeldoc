@@ -1,0 +1,6 @@
+1.修改bug 3817031和bug 3837161.
+问题是edit将文字和光标画到外面导致的。由于技术原因无法解决。因此bug解决方法是增大edit的高度。
+将DiscussProfileName("讨论组")、ProfileOther("主题 -")和DiscussLongName向上提1像素，并将ProfileOther和DiscussLongName增高1像素，DiscussLongName高度足够，就不会画到外面了。
+2.跟bug 3850501. 原因是没有调用ITXGroupMgr::UpdateMemCardInfo()导致。1.46中是在CTempSessionUIControlHandle::InitUIControlList()里调的。已经与taoluan沟通，请他看看是否可以在临时会话里加上调用。
+3.跟bug 3802591. 当离线时设置头像时，ITXGroupHeadMgr::UploadGroupDefinehead()和ITXGroupHeadMgr::CancelGroupDefinehead()都会返回E_FAIL，此时提示即可。但提示语由产品确定下。
+4.前台组例会。leonchan分享af设计和server配置大工具栏设计。

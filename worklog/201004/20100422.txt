@@ -1,0 +1,2 @@
+1.修改bug3276131。当收到close消息时，询问所有的插件是否要关闭。另外CAFChatFramePanelCtrl::CloseChatView()中，将m_pWndHost = NULL;但pWndHost->CloseWndHost()异步发close消息后，用户可能选择不关窗口。那么m_pWndHost为NULL会导致很多问题，需要havenwang一起修改这里，才能彻底解决bug.
+2.修改bug3137121。改为，这个文本框允许输入各种字符，与个人资料中的电话输入框，保持一致。

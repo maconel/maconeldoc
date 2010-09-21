@@ -1,0 +1,5 @@
+# 针对bug 4397551，给tracy编译一个release版本。
+# 制定博客版开发计划。(为完成，以前写过，找不到了T_T)
+# 了解server网络结构，准备新增协议的分享。
+# 改bug 4455301。原因是GroupDirect.xml中GroupDirectPage节点设置了sizeAsParent="true"。解决方法是，去掉sizeAsParent，并设置autoHeight="true"。
+# 周例会。
