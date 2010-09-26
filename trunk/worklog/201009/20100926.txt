@@ -1,0 +1,4 @@
+# 继续学习opengl。
+# 试用真机。
+# 完成了firefox下的数字签名。webqq控件10.01后提测azraellong(龙福康)。群相册控件10.20后安排liveliang(梁寅)。
+# android视频研究。
