@@ -1,0 +1,2 @@
+# 总结android视频研究到文档中。
+# 写android中的opengl例子。
