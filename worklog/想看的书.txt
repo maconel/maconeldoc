@@ -1,0 +1,5 @@
+卓有成效的程序员 http://book.douban.com/subject/3558788/
+编译原理 http://book.douban.com/subject/3296317/
+C++程序设计语言 http://book.douban.com/subject/1099889/
+深入理解计算机系统 http://book.douban.com/subject/1230413/
+计算机程序的构造和解释 http://book.douban.com/subject/1148282/
