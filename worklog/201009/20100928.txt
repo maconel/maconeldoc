@@ -1,0 +1,2 @@
+# 完成了android上的opengl demo。
+# GIPS相关预研。
