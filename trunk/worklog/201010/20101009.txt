@@ -1,0 +1,9 @@
+# 看《android应用开发揭秘》。
+# 自动生成的android程序由哪些部分组成。
+# 如何使用资源文件。
+# android程序一般由4种模块组成：activity，intent，content provider，service。
+# 如果把android当成浏览器，手机外壳当成浏览器本身的外框和面板，那么一个activity就相当于一个页面。
+# intent是一个包含行为和数据的容器。activity通过intent-filter声明自己接受什么样的intent。intent可以在activity之间传递，和command模式或职责链模式有点类似。
+# content provider，数据存储。
+# service, 服务。
+# activity的生命周期。打开关闭一个activity的顺序：onCreate-onStart-onResume-onPause-onStop-onDestroy。2个activity切换的顺序：a1.onPause-a2.onCreate-a2.onStart-a2.onResume-a1.onStop-a1.Destroy。
