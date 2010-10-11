@@ -1,0 +1,4 @@
+# 《android应用开发揭秘》android界面开发。
+# 《android应用开发揭秘》多媒体开发。
+# 了解gips视频和公司的视频模块情况。
+# 学习YUV格式。http://km.oa.com/post/80832
