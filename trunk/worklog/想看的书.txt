@@ -3,3 +3,6 @@
 C++程序设计语言 http://book.douban.com/subject/1099889/
 深入理解计算机系统 http://book.douban.com/subject/1230413/
 计算机程序的构造和解释 http://book.douban.com/subject/1148282/
+软件调试 http://book.douban.com/subject/3088353/
+领导力 http://book.douban.com/subject/1144804/
+第五项修炼 http://book.douban.com/subject/4051739/
