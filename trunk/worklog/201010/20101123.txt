@@ -1,0 +1,6 @@
+# java中去掉标题栏。
+# java中正确显示ip。
+# 按照client调整codec参数。
+# demo_win中改成dx抓视频。
+# demo_win增加了全屏功能。
+# 试用gips for android。已经可以编译，但需要VoE authentication key。
