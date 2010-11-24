@@ -1,0 +1,3 @@
+# 调通了gips给的example。
+# 已把c++部分的acodec完成了。
+# demo_win中完成了ssim。
