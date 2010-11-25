@@ -1,2 +1,2 @@
 # 将gips加入到vpx_android这个demo中。未完成。
-# kevinchen的音视频和长连接分享。
+# android音视频项目技术讨论会。
