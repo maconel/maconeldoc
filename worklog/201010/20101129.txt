@@ -1,0 +1,4 @@
+# 制定开发计划。
+# 给gips开了EC, NS, AGC等处理，效果不好，现在改成只开EC, AECM模式。
+# 向kevinchen和jamesjin了解音频的性能指标，有MOS和PESQ，jamesjin给了PESQ的工具，但估计用不上。
+# 将pad上的视频调为全屏显示。
