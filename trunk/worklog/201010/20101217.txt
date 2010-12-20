@@ -1,0 +1,2 @@
+# 写了一个专门测视频性能的vpxperf。
+# 为演示，在各种pad上调vpx_android。
