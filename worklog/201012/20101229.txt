@@ -1,0 +1,1 @@
+# 解决icu_app中，gips没有调GIPS_transport::SendPacket()的问题。原因是CICUAudioApp::StartSession()中，没有调GIPSVE_StartSend()。但加上后，会在CICUAudioApp::DetachEnv()中crash，gary接手来查。
