@@ -1,1 +1,2 @@
 # 解决了vpx_android程序启动后显示变暗的问题。原因是先调getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);，然后再显示inputIp提示框。将此句写在AVDemoActivity.begin()中即可。
+# 研究后处理。完成了二次线性放大，还没优化。尝试ffmpeg中的算法，还未搞清楚调用方法。尝试教授给的代码，还未编译通过。
