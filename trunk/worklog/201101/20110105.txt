@@ -1,3 +1,4 @@
 # 试图把ffmpeg里的scale代码抽取出来，未成功。
 # 与nvidia人员开会。
 # 修改了编码时计算sp帧错误的bug。
+# 看nvidia相关文档和ndk的opengl例子。
