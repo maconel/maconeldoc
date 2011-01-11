@@ -1,0 +1,4 @@
+# 去掉vp8_codec工程中，log相关的代码。
+# arm例子编译完成，调试通过。下一步往里加算法实现。
+# 调cpu过高的问题，原因是timer的实现，可能android对某些函数不支持。
+# 调整icu_app和AVDemo的参数。
