@@ -1,0 +1,3 @@
+# 调通了nvidia给的库。效果不错，在pptest上cpu占用也很低，4%左右。
+# 修改vcodec的接口，gop在创建的时候传入。增加vcodec_resize接口，但还未测试。
+# 跟频繁重建vcodec时crash的bug。发现是同时做encode或decode导致的，具体原因还不清楚。但icu_video中，不应该在setOption时频繁重建vcodec，后期该掉它。
