@@ -1,0 +1,2 @@
+# 将yuv.cpp加到了icuapp中，效果不错，cpu提高5%左右。
+# 优化yv12_to_rgb32()。
