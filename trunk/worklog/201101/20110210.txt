@@ -1,0 +1,1 @@
+# 给avdemo加上init_yuv_table()的调用，否则yv12_to_rgb32会有错误。
