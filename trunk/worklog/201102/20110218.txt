@@ -1,0 +1,1 @@
+# 搭建自动编译平台。ant + hudson。ant已可以自动编译通过，但hudson从svn拉代码总是authentication cancelled，待解决。
