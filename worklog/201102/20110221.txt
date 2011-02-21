@@ -1,0 +1,7 @@
+# system_server占cpu很高的原因如下：
+    # system_server会负责所有程序的event循环，如果程序对处理不当，则会导致system_server占用cpu很高。
+    # android邮件列表中对此有讨论。http://code.google.com/p/android/issues/detail?id=7836。在帖子最后，宣称在2.3中重写了android的输入部分，这个问题也一起解决了。
+    # icuapp的情况是，android中使用opengl时，需要在java中实现GLSurfaceView.Renderer接口，并实现onDrawFrame()函数。程序运行后，android底层会不断调用onDrawFrame()，我们的程序在这里去做渲染。
+    # android源码(android/frameworks/base/opengl/java/android/opengl/GLSurfaceView.java line1146 guardedRun())中可以看到，android在处理event循环时，在循环中不断调onDrawFrame()，其间有一个sGLThreadManager.wait();。没找到wait()的实现，估计为了保证保证使用者的精度，wait的时间很短。而这段代码可能是作为一个service，跑在system_server中的，因此导致system_server的cpu占用很高。
+    # 解决方法是，在java层实现onDrawFrame()时，加一个适当的sleep，保证15fps的精度即可。经验证，如果sleep(1000)，可以让system_server的cpu降到5%，如果sleep(1000/15)，cpu在8%左右。在具体实现时，sleep的时间应由计算得到，或由rtp模块驱动。
+# 继续看hudson从svn拉代码的问题。应该是公司svn部署在域中导致的。现在通过java -Dsvnkit.http.methods=Basic,NTLM -jar hudson.war的方式启动，好像可以拉到代码了，但在tomcat中还不行，继续研究。
