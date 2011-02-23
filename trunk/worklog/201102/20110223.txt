@@ -1,0 +1,3 @@
+# 给daily build加上自动测试。
+# 解决前处理yuv转换后黑屏的问题。
+# 将yuv to rgb处直接转成rgb565，以便能使用copyPixelsFromBuffer函数。
