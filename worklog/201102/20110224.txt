@@ -1,0 +1,3 @@
+# 跑通了音频，cpu没见高，但跑不到10秒就会crash，待查。暂时又关掉了音频，需要开时，放开IcuApp.java中105行，ICUMgrImpl.StartSession()即可。
+# 完成yuv to rgb565转换。java层改用copyPixelsFromBuffer函数。
+# 优化peerview.java代码，去掉一些无用的代码和频繁的new。
