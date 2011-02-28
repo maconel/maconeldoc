@@ -1,0 +1,8 @@
+# 解决system_server。
+# 搭建daily build环境。
+# 解决前处理yuv转换后黑屏的问题。
+# 完成yuv to rgb565转换。java层改用copyPixelsFromBuffer函数。
+# 跑通了音频，但还有crash。
+# 优化peerview代码，去掉一些无用的代码和频繁的new。
+# 整合qdroid和icuapp。
+# 统计数据上报需求。
