@@ -1,0 +1,5 @@
+# 解决音频在运行几秒钟后crash的问题。原因是CICUAudioApp::SendPacket()中，GetObjectClass()后，没及时释放导致。在后面加上DeleteLocalRef()即可。后续优化audio的jni接口实现时，更改获取函数指针的方法，这里就直接去掉GetObjectClass()的调用了。
+# libvpx从armv5t更新为armv6版本。经测，在三星和nexus one上可以正常运行，三星上cpu占用有明显降低。
+# 优化audio的jni接口实现。
+    # 将CICUAudioApp::SendPacket()中获取函数指针的代码放在init中做，并缓存使用。
+    # 将CICUAudioApp::SendPacket()中每次new内存去掉，改为传buf大小到java层，再由java释放分配内存后，调回CICUAudioApp::GetSendBuffer()得到buf内容。
