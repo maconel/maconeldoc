@@ -1,0 +1,2 @@
+# 调vp8解码时crash的问题。原因是vpx_codec_internal.h文件vpx_internal_error()中调用longjmp()时，会crash。vp8中调用此函数的还有不少，解决方法需进一步讨论。
+# QQ开放平台分享。
