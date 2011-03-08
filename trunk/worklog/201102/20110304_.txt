@@ -1,0 +1,4 @@
+# 优化音频的接口，直接与video的c层交互，不通过java中转。同时解决了音频在运行几秒钟后crash的问题。
+# 解决音频断断续续的问题。
+# 将音频在icuapp, QDroid中都调通。
+# libvpx从armv5t更新为armv6版本。
