@@ -1,0 +1,2 @@
+# 完成VideoUnitTest，并加入daily build。
+# 更新vp8到0.9.6版本，并使用--enable-realtime-only，性能大幅提升。
