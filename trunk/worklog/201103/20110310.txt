@@ -1,0 +1,4 @@
+# 调通daily build中的VideoUnitTest。
+# 将gips的采样率由16降为8，cpu能下降5%，但回音很严重，还会产生啸叫，因此恢复默认。
+# 音频在StopSession()时，没有StopSend()，补上。
+# 详细了解vp8的CHANGELOG。
