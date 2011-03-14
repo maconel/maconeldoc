@@ -1,0 +1,3 @@
+# 找获取cpu频率的方法，从/proc/cpuinfo中可以读到BogoMIPS，但不是准确的cpu频率，可能会因为设备的省电策略导致它不准确。
+# 跟localview不显示的问题。原因是被peerview盖住了，而且返回到桌面再回来，localview和peerview会互换位置。解决方法是将localview设为总在最上，这样会盖住静音图标，明天与产品确认，由max修改代码。
+# 跟关屏幕再解锁，程序crash的问题。原因是在nexus one上，开了摄像头后，在关屏幕时，activity会被destroy然后重新create，解锁后又会destroy和create。由于程序关闭较慢，还未destroy完毕就被create，导致产生问题。解决方法是在onDestroy中，主动退出音视频的activity。由max修改代码。
