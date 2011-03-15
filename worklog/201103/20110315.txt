@@ -1,0 +1,6 @@
+# 上午请假。
+# 与qq联调长连接相关。
+    # 申请\\hummersym2权限。
+    # 找qq2010 beta1的对应代码，编译后使用dll和pdb。
+    # kevinchen派mortyzhu(朱文涛)与我们联调。
+    # yanjun从\\hummersym2找到了正确的pdb，已经可以调试起来，但由于没有pc到pad的直连网络环境，因此今天还不能调hire的问题。
