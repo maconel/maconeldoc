@@ -1,0 +1,4 @@
+# 跟音频与qq互通的问题。已解决。不能通的原因是codec的pltype与qq不一致。目前的情况是，如果使用ilibc，就可以和所有qq版本互通，但kevinchen不同意，说性能太差。如果使用isac，可以和phantomqi修改的使用isaclc的新版本互通。phantomqi说以后都用它，而放出去的视频博客版也只有几天使用时间，那么就用isac吧。
+# 跟音频初始化失败的问题。已解决。原因是xml里的权限声明被注释掉了，恢复即可。
+# 跟音频关闭后，打电话也被使用扬声器的问题。已解决。原因是StartSession时打开了扬声器，StopSession时却没关上，关上即可。缺憾是StartSession时不能获得扬声器的初始状态，StopSession时只好强制关掉它了。
+# 跟关闭屏幕后，phone和pad表现不一致的问题。拉rayxiao, wing, benchen说了下情况，wing不在，因此下周一继续讨论，也许加个提示吧。
