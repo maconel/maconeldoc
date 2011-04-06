@@ -1,1 +1,4 @@
-# 面试田俊虎。
+# 面试田俊虎。未通过。
+# 测试"有人研究过Canvas转OpenGL吗？"_http://www.eoeandroid.com/forum-viewthread-tid-61995-highlight-opengl.html里说的方法，在icuapp中，xoom上进行了测试，性能没看到提升。
+# 阅读android开机动画源码。
+# 研究使用egl在ndk中使用opengl。
