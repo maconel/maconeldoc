@@ -1,0 +1,2 @@
+# 研究完全在ndk里使用egl。由android-ndk讨论组里一篇帖子所说，从java里得到surface的jobject后，要往后移8个字节，可以作为ndk的window使用，但需要在android 2.0环境下。而我们是2.2以上，测试后发现，得到的window传给eglCreateWindowSurface()时，xoom上会crash，sansung上会返回失败。由于ndk r5已完全支持在ndk中创建surface和使用egl，因此暂时放弃这个方向。
+# 帮助刘宏定位使用subimage后图像大小位置不对的问题，还未有结果。
