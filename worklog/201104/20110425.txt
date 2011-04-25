@@ -1,3 +1,4 @@
 # 整理ICU总结计划ppt。
 # 能力不匹配的逻辑处理。
 # 在dell streak上摄像头初始化crash的问题。
+# 参加jerrydyang参与的总结计划会。
