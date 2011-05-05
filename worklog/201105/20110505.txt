@@ -1,0 +1,2 @@
+# 跟调与QQ视频时，断开后，摄像头和麦克风都未关闭的问题。原因是发完avclose后，发了cancel，导致qq的长连接关闭，没把avclose传给应用层。解决方法是java层中closeVideo()中，把refuseSession()该为stopSession()。
+# 验证信号图标的效果。正确。
