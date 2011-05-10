@@ -1,0 +1,2 @@
+# 编译最新的vp8代码。编译失败：for reading: No such file or directorye.asm.s:24: Error: can't open asm_enc_offsets.asm
+# 跟nvidia 264的fc的问题。基本可以确定是他们给的libstagefright.so和xoom上的libstagefright.so接口不同导致。
