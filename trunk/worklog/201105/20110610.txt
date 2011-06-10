@@ -1,0 +1,5 @@
+- [q+]完成本地应用和电脑管家的入口。日历widget也能自动启动了。
+- [q+]建立pcassist工程。
+- [q+]修改"mycomputer"的ui。
+- [q+]重构"mycomputer", "systemtools", "work"，抽象出不同部分。
+- [q+]"work"中增加office的获取和调用。
