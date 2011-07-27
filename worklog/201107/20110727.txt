@@ -1,0 +1,2 @@
+- review v1.1 bug。
+- 修改了几个v1.1的bug。
