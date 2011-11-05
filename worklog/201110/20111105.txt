@@ -1,0 +1,3 @@
+- 建立datalogic。
+- 封装CallbackWrapper。
+- 封装appdataroamwrapper，但接口没做任何转换。
