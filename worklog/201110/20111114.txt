@@ -1,0 +1,4 @@
+- 项目周会。
+- 技术改造宣讲。
+- 封装coredatacenter。
+- v2.4 bug。
