@@ -1,0 +1,2 @@
+- 封装coreserviceengine的接口。
+- 跟解析json crash的问题。
