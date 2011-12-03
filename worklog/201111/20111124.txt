@@ -1,0 +1,3 @@
+- 讨论ItemListCtrl方案和接口。
+- 讨论拖动动画方案。
+- 封装coreserviceengine。

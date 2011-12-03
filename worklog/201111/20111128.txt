@@ -1,0 +1,1 @@
+- 封装datalogic。kernel和services中，非动态加载的都简单封起来了，可以跑，但还需要封参数和调试。
